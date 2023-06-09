@@ -5,6 +5,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+body.hideSrcoll {
+    overflow: hidden;
+}
+
 .hide {
     display: none;
 }
@@ -136,17 +140,22 @@ footer a:hover {
 
     position: absolute;
     top: 0;
-
-    width: 100vw;
-    height: 100vw;
+    bottom: 0;
+    left: 0;
+    right:0 ;   
 
     display: flex;
-    
     justify-content: center;
+
+    transition: 400ms;
+}
+
+#modal.addScroll {
+    overflow: auto;
 }
 
 #modal .content {
-    margin-top: 128px;
+    margin-top: 50px;
 
     color: white;
 
@@ -159,7 +168,7 @@ footer a:hover {
 #modal form {
     max-width: 800px;
     width: 80%;
-    margin: 0px auto;
+    margin: 0px auto ;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -242,4 +251,88 @@ form button:hover {
 #modal.hide {
     opacity: 0;
     visibility: hidden;
+}
+
+/*IDEIA*/
+
+#page-ideias {
+    margin: 0;
+}
+#page-ideas #container {
+    width: 90%;
+    max-width: 980px;
+    display: block;
+}
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style-type: none;
+    margin-right: 15px;
+}
+#page-ideas nav li a {
+    color:rgb(39, 38, 38)
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+#page-ideas nav li:last-child a {
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #FF5E84;
+    color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+
+
+}
+#page-ideas nav li:last-child a:hover {
+    color: white;
+    background-color: #0984e3;
+}
+
+section#title {
+    text-align: center;
+}
+section#title p {
+    opacity: 0,7;
+    margin: 0;
+}
+section#title h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+section#ideias {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideias .idea {
+    margin: 0;
+}
+
+section#ideias,
+section#title,
+footer {
+    margin-top: 64px;
 }
